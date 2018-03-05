@@ -57,12 +57,8 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun0/f
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_DEFAULT_BRIGHTNESS := 80
 TW_DEFAULT_EXTERNAL_STORAGE := true
-TW_EXCLUDE_SUPERSU := true
 TW_INCLUDE_NTFS_3G := true
 TW_IGNORE_MISC_WIPE_DATA := true
-
-# Asian region languages
-TW_EXTRA_LANGUAGES := true
 
 # Encryption support
 TW_INCLUDE_CRYPTO := true
@@ -71,3 +67,17 @@ TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 
 # Debug flags
 TWRP_INCLUDE_LOGCAT := true
+
+# Init properties from bootloader BoardID version, ex. model info
+TARGET_INIT_VENDOR_LIB := libinit_kenzo
+TARGET_RECOVERY_DEVICE_MODULES := libinit_kenzo
+TARGET_UNIFIED_DEVICE := true
+
+# Disable Mouse Cursor
+TW_INPUT_BLACKLIST := "hbtp_vm"
+
+# Device version
+TW_EXCLUDE_SUPERSU := true
+TW_DEVICE_VERSION := 5
+TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
+

@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_kenzo.mk
+    $(LOCAL_DIR)/lineage.mk
